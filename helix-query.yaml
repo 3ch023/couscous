@@ -41,11 +41,7 @@ indices:
         select: head > meta[property="og:title"]
         value: |
           attribute(el, 'content')
-      image:
-        select: head > meta[property="og:image"]
+      promopages:
+        select: body > meta[name="promopages"]
         value: |
-          match(attribute(el, 'content'), 'https:\/\/[^/]+(\/.*)')
-      pages:
-        select: body > meta[property="og:image"]
-        value: |
-          match(attribute(el, 'content'), 'https:\/\/[^/]+(\/.*)')
+          attribute(el, 'content')
