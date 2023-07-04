@@ -42,6 +42,6 @@ indices:
         value: |
           attribute(el, 'content')
       promopages:
-        select: body > meta[name="promopages"]
+        select: head > meta[name="promopages"]
         value: |
           attribute(el, 'content')
