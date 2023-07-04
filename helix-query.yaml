@@ -34,8 +34,8 @@ indices:
   
   promo:
     include:
-      - '/promotions/**'
-    target: /promotions/query-index.xlsx
+      - '/promopoc/promotions/**'
+    target: /promopoc/promotions/query-index.xlsx
     properties:
       title:
         select: head > meta[property="og:title"]
@@ -43,5 +43,9 @@ indices:
           attribute(el, 'content')
       image:
         select: head > meta[property="og:image"]
+        value: |
+          match(attribute(el, 'content'), 'https:\/\/[^/]+(\/.*)')
+      pages:
+        select: body > meta[property="og:image"]
         value: |
           match(attribute(el, 'content'), 'https:\/\/[^/]+(\/.*)')
