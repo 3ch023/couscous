@@ -62,15 +62,3 @@ indices:
         select: head > meta[name="promocode"]
         value: |
           attribute(el, 'content')
-      promostart:
-        select: head > meta[name="promostart"]
-        value: |
-          attribute(el, 'content')
-      promoend:
-        select: head > meta[name="promoend"]
-        value: |
-          attribute(el, 'content')
-      promopages:
-        select: head > meta[name="promopages"]
-        value: |
-          attribute(el, 'content')
