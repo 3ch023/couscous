@@ -37,8 +37,16 @@ indices:
       - '/promopoc/promotions/**'
     target: /promopoc/promotions/query-index.xlsx
     properties:
-      title:
-        select: head > meta[property="og:title"]
+      promocode:
+        select: head > meta[name="promocode"]
+        value: |
+          attribute(el, 'content')
+      promostart:
+        select: head > meta[name="promostart"]
+        value: |
+          attribute(el, 'content')
+      promoend:
+        select: head > meta[name="promoend"]
         value: |
           attribute(el, 'content')
       promopages:
